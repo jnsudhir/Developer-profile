@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developers Repository</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header id="headerContainer">       
+            <h1 id="headerText">The<br>
+                 Developer <br>
+                 Repository
+                </h1>
+            <img id="userLogo" src="user.png">
+    </header>
+    <main>
+        <div id="mainHeading">
+            <h2 id="mainText">Explore developer profiles</h2>
+        </div>
+        <hr id="horizontalLine">
+        <div id="searchOuter">
+            <div id="searchContainer">
+                <input id="searchBox" type="search" placeholder="Search for username"></input>
+                <img id="searchIcon" src="search-24px.svg">                
+            </div>
+        </div>
+        <div id="devButtonsContainer">
+            <div id="devButtons">
+                <button id="sudhirButton"><img src="https://avatars.githubusercontent.com/u/40768697?v=4" id="sudhirprofileImage">J N Sudhir</button>
+                <button id="MetaButton"><img src="https://avatars.githubusercontent.com/u/69631?v=4" id="metaProfileImage">Meta</button>
+            </div>
+        </div>
+        <div id="devContainer">
+            <div id="devHeader">
+                <h2>The Developer Profile</h2> <h2 id="goBacktoHomePage">All Developers</h2>
+            </div>
+            <div id="devInfo">
+                <img id="devImage">
+                <div id="devNameLocation">
+                    <h1 id="devName"></h1>
+                    <p id="devBio"></p>
+                    <a id="githubLink"><img src="github.png" id="githubImage"></a>
+                    <a id="linkedinLink"><img src="linkedin.png" id="linkedinImage"></a>
+                    <a id="codechefLink"><img src="codechef.png" id="codechefImage"></a>
+                    <a id="hackerRankLink"><img src="hackerRank.png" id="hackerRankImage"></a>
+                    <a id="twitterLink"><img src="twitter.png" id="twitterImage"></a>
+                    <a id="mediumLink"><img src="medium.png" id="mediumImage"></a>
+                    <div id="locationCompany">
+                        <img src="location_on-24px.svg" id="locationImage"></img><p id="devLocation"></p> 
+                        <img src="business-24px.svg" id="businessImage"></img><p id="devcompany"></p> 
+                        <img src="insert_link-24px (1).svg" id="linkImage"></img><p id="devLink"></p>
+                    </div>
+                </div>
+            </div>
+            <h2 id="repositoriesText">Github repositories</h2>
+                <hr>
+            <div id="repos">
+            </div>
+            <footer id="devFooter">
+                <button id="printButton" onclick="window.print()">Print</button>
+                <button id="goBackButon" >Go back</button>
+
+            </footer>
+
+        </div>
+        <hr id="horizontalLine">
+        <div id="questionContainer">
+            <h1 id="questionText">Could not find what you are looking for ?</h1>
+        </div>
+        <div id="addDevBtnContainer">
+            <button id="addDevBtn"> Add developer info </button>
+        </div>
+        <div id="formContainer">
+            <h2 id="formHeading">Add developer Profile</h2>
+            <hr>
+            <form id="devForm">
+                <!-- github -->
+                <label for="github" id="githubLabel"><img id="githubFormImage" src="github.png"> Github*</label><br>
+                <input type="text" id="githubText" name="github" required><br>
+                <!-- linkedin -->
+                <label for="linkedin" id="linkedinLabel"><img id="linkedinFormImage" src="linkedin.png"> Linkedin</label><br>
+                <input type="text" id="linkedinText" name="linkedin"><br>
+                <!-- codechef -->
+                <label for="codechef" id="codechefLabel"><img id="codechefFormImage" src="codechef.png">Codechef</label><br>
+                <input type="text" id="codechefText" name="codechef"><br>
+                <!-- hackerrank -->
+                <label for="hackerrank" id="hackerrankLabel"><img id="hackerrankFormImage" src="hackerRank.png"> Hackerrank</label><br>
+                <input type="text" id="hackerrankText" name="hackerrank"><br>
+                <!-- twitter -->
+                <label for="twitter" id="twitterLabel"><img id="twitterFormImage" src="twitter.png"> Twitter</label><br>
+                <input type="text" id="twitterText" name="twitter"><br>
+                <!-- medium -->
+                <label for="medium" id="mediumLabel"><img id="mediumFormImage" src="medium.png"> Medium</label><br>
+                <input type="text" id="mediumText" name="medium">
+                <!-- <hr> -->
+                <div id="formButtons">
+                    <input type="button" id="cancelForm" value="Cancel">
+                    <input type="submit" id="formSubmitBtn" value="Submit">
+                </div>
+            </form>
+
+        </div>
+        <div id="socialMediaContainer">
+            <h3 id="socialMediaText">Stay Connected : </h3>
+                <a href="https://github.com/jnsudhir"><img id="githubSocialMedia" src="github2.png"></a>
+                <a href="https://www.instagram.com/j.n.sudhir"><img id="instagramSocialMedia" src="instagram.png"></a>
+                <a href="https://wa.me/918790854310" target="_blank"><img id="whatsappSocialMedia" src="whatsapp.png"></a>      
+        </div>
+        <footer id="footerContainer">
+            <h2 id="footerText">Made with <img id="heartIcon" src="heartFav.png"></i> by Sudhir</h2>
+        </footer>
+    </main>
+    <script src="myScript.js"></script>
+</body>
+</html>

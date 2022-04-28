@@ -1,0 +1,540 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap");
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
+body {
+  margin: 0;
+}
+header {
+  width: 100%;
+  height: 92vh;
+  background-color: #2f2e41;
+  display: flex;
+  margin-top: 0%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+#headerText {
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 3.5cm;
+  padding: 10px;
+  width: 45%;
+}
+#userLogo {
+  height: 80vh;
+  margin: 10px;
+  width: 45%;
+}
+#mainHeading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#mainText {
+  display: flex;
+  flex-wrap: wrap;
+  color: #2f2e41;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2cm;
+}
+#horizontalLine {
+  width: 90%;
+}
+#searchOuter {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+#searchContainer {
+  width: 50%;
+  height: 1.8cm;
+  background-color: #d0cde1;
+  margin: 10px;
+  display: flex;
+  border-radius: 10px;
+}
+#searchIcon {
+  height: 1.2cm;
+  margin-top: 10px;
+  cursor: pointer;
+}
+#searchBox {
+  width: 86%;
+  height: 1.3cm;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+::-webkit-input-placeholder {
+  text-align: center;
+  font-size: medium;
+  font-family: "Nunito Sans", sans-serif;
+}
+#devButtonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 1.6cm;
+  margin-bottom: 50px;
+}
+#devButtons {
+  display: flex;
+  justify-content: center;
+
+  width: 40%;
+  justify-content: space-between;
+}
+#sudhirButton,
+#MetaButton {
+  width: 5cm;
+  background-color: transparent;
+  color: brown;
+  border: none;
+  cursor: pointer;
+
+  align-items: center;
+  font-size: x-large;
+  display: flex;
+  gap: 15px;
+}
+#sudhirprofileImage,
+#metaProfileImage {
+  display: flex;
+  height: 1cm;
+  width: 1cm;
+  border-radius: 50%;
+}
+#questionText {
+  color: #2f2e41;
+}
+#devContainer {
+  display: none;
+  position: absolute;
+  width: 90%;
+  top: 2cm;
+  background-color: white;
+  border-radius: 10px;
+  justify-content: center;
+  margin-left: 80px;
+  z-index: 1;
+  box-shadow: 3px 10px 8px 10px #201f29;
+}
+
+#devHeader {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  background-color: #2f2e41;
+  border-radius: 10px 10px 0 0;
+}
+#devInfo {
+  display: flex;
+  background-color: #d0cde1;
+  width: 100%;
+  height: 8cm;
+  justify-content: space-between;
+}
+#devImage {
+  width: 7cm;
+  height: 7cm;
+  border-radius: 50%;
+  padding: 20px;
+}
+#devNameLocation {
+  display: flex;
+margin-right: 4cm;
+  width: 50%;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+#devName {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+
+  justify-content: center;
+  font-size: 2cm;
+  color: #2f2e41;
+  font-family: "Nunito Sans", sans-serif;
+  height: 1.7cm;
+  width: 100%;
+}
+#devBio {
+  display: flex;
+  color: #2f2e41;
+  font-size: medium;
+  font-weight: bolder;
+  margin-top: -55px;
+  width: 100%;
+
+  text-align: center;
+  justify-content: center;
+  height: 0.7cm;
+}
+#githubImage,
+#linkedinImage,
+#codechefImage,
+#hackerRankImage,
+#twitterImage,
+#mediumImage {
+  width: 1cm;
+  height: 1cm;
+  border-radius: 50%;
+  padding: 10px;
+  margin-top: -70px;
+}
+#locationCompany {
+  width: 100%;
+  height: 0.7cm;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#locationImage,
+#businessImage,
+#linkImage {
+  margin-bottom: 20px;
+}
+#devLocation,
+#devcompany,
+#devLink {
+  font-family: "Nunito Sans", sans-serif;
+  color: #2f2e41;
+  font-weight: bolder;
+  font-size: larger;
+  height: 0.9cm;
+  margin-top: 1px;
+}
+#repositoriesText {
+  color: #2f2e41;
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center;
+  margin: 15px;
+  font-size: 2cm;
+}
+#repos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* flex-direction: column; */
+}
+.devRepos {
+  color: #0768fa;
+  width: 100%;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.5cm;
+  text-decoration: none;
+}
+.repoUpdatedat {
+  color: #8c81d4;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: x-large;
+}
+.repodescription {
+  color: #2f2e41;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: x-large;
+}
+#devFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#printButton {
+  width: 2.5cm;
+  height: 1cm;
+  color: white;
+  background-color: #8c81d4;
+  border: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 10px;
+}
+#printButton:hover {
+  transform: scaleX(1.2);
+}
+#goBackButon {
+  width: 2.5cm;
+  height: 1cm;
+  color: white;
+  background-color: #8c81d4;
+  border: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 10px;
+}
+#questionContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#addDevBtnContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+}
+#addDevBtn{
+    color: white;
+    background-color: #7C639F;
+    width: 8cm;
+    height: 2cm;
+    border-radius: 10px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size:xx-large;
+    font-weight: bold;
+    margin: 10px;
+}
+#addDevBtn:hover{
+transform: scaleX(1.2);
+}
+#formContainer {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 60%;
+    height:max-content;
+    box-shadow: 3px 10px 8px 10px #201f29;
+    border-radius: 10px;
+    top: 7cm;
+    left: 22%;
+    background-color: white;
+    /* padding: 20px;     */
+}
+#devForm{
+    height: 100%;
+    
+}
+#formHeading{
+    display: flex;
+    justify-content: center;
+}
+#githubFormImage ,#linkedinFormImage ,#codechefFormImage ,#hackerrankFormImage ,#twitterFormImage ,#mediumFormImage {
+    width: 1cm;
+    height: 1cm;
+}
+#githubLabel ,#linkedinLabel ,#codechefLabel ,#hackerrankLabel ,#twitterLabel ,#mediumLabel {
+    font-family: "Nunito Sans", sans-serif;
+    font-size:xx-large;
+    font-weight: bold;
+    gap: 10px;
+    margin: 10px;
+}
+#githubText ,#linkedinText ,#codechefText ,#hackerrankText ,#twitterText ,#mediumText {
+    width: 95%;
+    height: 0.8cm;
+    margin: 20px;
+    border-radius: 5px;
+}
+#formButtons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#cancelForm{
+    font-family: "Nunito Sans", sans-serif;
+    text-decoration: none;
+    width: 3cm;
+    color: #3F3D56;
+    font-weight: bolder;
+    font-size:x-large;
+    border: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#formSubmitBtn{
+    font-family: "Nunito Sans", sans-serif;
+    width: 3cm;
+    height: 1.5cm;
+    background-color: #7C639F;
+    color: white;
+    border-radius: 10px;
+    font-size: x-large;
+    margin: 10px;
+}
+#socialMediaContainer{
+    width: 100%;
+    height: 2cm;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #3F3D56;
+}
+#socialMediaText{
+    font-family: "Nunito Sans", sans-serif;
+    color: #3F3D56;
+    font-size: x-large;
+    font-weight: bold;
+}
+#githubSocialMedia ,#instagramSocialMedia ,#whatsappSocialMedia {
+    height: 1cm;
+    width: 1cm;
+    margin: 10px;
+    display: flex;
+    margin-top: 20px;
+}
+#githubSocialMedia:hover ,#instagramSocialMedia:hover ,#whatsappSocialMedia:hover {
+    transform: scaleY(1.2);
+}
+#footerContainer {
+    width: 100%;
+    height: 2cm;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Nunito Sans", sans-serif;
+    color: white;
+    background-color: #3F3D56;
+    justify-content: center;
+}
+#heartIcon{
+    width: 0.6cm;
+    height: 0.6cm;
+}
+#footerText{
+    gap: 10px;
+}
+@media screen and (max-width: 500px) {
+  body {
+    margin: 0;
+  }
+  header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    text-align: center;
+  }
+  #headerText {
+    margin: 0;
+    height: 35%;
+    font-size: xx-large;
+    width: 90%;
+  }
+
+  #userLogo {
+    height: 50%;
+    margin-top: -5%;
+    width: 90%;
+  }
+  #mainText {
+    font-size: large;
+  }
+  #searchOuter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #searchContainer {
+    width: 90%;
+    height: 1.2cm;
+    display: flex;
+    justify-content: space-between;
+  }
+  #searchIcon {
+    height: 30px;
+    justify-content: flex-end;
+    margin-right: 10px;
+  }
+  #searchBox {
+    height: 0.9cm;
+    width: 6.5cm;
+    margin-top: 5px;
+    margin-left: 10px;
+    text-align: center;
+  }
+  #devButtons {
+    width: 6cm;
+  }
+  #sudhirButton,
+  #MetaButton {
+    font-size: medium;
+  }
+  #devContainer {
+    width: 90%;
+    margin-left: 15px;
+    display: flex;
+  }
+  #devHeader {
+    font-size: small;
+  }
+  #devInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 12cm;
+  }
+  #devImage {
+    width: 4cm;
+    height: 4cm;
+  }
+  #devNameLocation {
+    width: 100%;
+    justify-content: center;
+    margin: 10px;
+  }
+  #devName {
+    font-size: 1cm;
+  }
+  #devBio {
+      display: flex;
+      flex-wrap: wrap;
+    padding: 10px;
+    font-size: medium;
+    justify-content: center;
+    height: 2cm;
+  }
+  #githubImage,
+  #linkedinImage,
+  #codechefImage,
+  #hackerRankImage,
+  #twitterImage,
+  #mediumImage {
+    height: 0.6cm;
+    width: 0.6cm;
+    padding: 10px;
+  }
+  #locationCompany {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-top: -0.5cm;
+    height: 2cm;
+    margin: 10px;
+  }
+  #devLocation,
+  #devcompany,
+  #devLink {
+    font-size: small;
+  }
+  #repositoriesText {
+    margin-top: 3.5cm;
+    font-size: xx-large;
+  }
+  #questionText{
+      font-size: large;
+  }
+  #githubText ,#linkedinText ,#codechefText ,#hackerrankText ,#twitterText ,#mediumText {
+      width: 80%;
+  }
+}
