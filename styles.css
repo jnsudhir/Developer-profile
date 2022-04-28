@@ -86,9 +86,12 @@ header {
 #devButtons {
   display: flex;
   justify-content: center;
-
+border: 3px solid red;
   width: 40%;
+  height:100%;
   justify-content: space-between;
+  flex-grow: ;
+  
 }
 #sudhirButton,
 #MetaButton {
@@ -97,7 +100,7 @@ header {
   color: brown;
   border: none;
   cursor: pointer;
-
+border: 3px solid red;
   align-items: center;
   font-size: x-large;
   display: flex;
@@ -412,6 +415,29 @@ transform: scaleX(1.2);
 }
 #footerText{
     gap: 10px;
+}
+.heyBtn{
+    width: 2cm;
+    background-color: #0768fa;
+    height: 1cm;
+}
+#userButton {
+    width: 5cm;
+  background-color: transparent;
+  color: brown;
+  border: none;
+  cursor: pointer;
+border: 3px solid red;
+  align-items: center;
+  font-size: x-large;
+  display: flex;
+  gap: 15px;
+}
+#userprofileImage{
+    display: flex;
+    height: 1cm;
+    width: 1cm;
+    border-radius: 50%;
 }
 @media screen and (max-width: 500px) {
   body {

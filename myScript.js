@@ -89,7 +89,8 @@ function showDeveloperProfile() {
     function goBack()
     {
         document.getElementById('devContainer').style.display="none";
-        document.getElementById("headerContainer").style.opacity="1"
+        document.getElementById("headerContainer").style.opacity="1";
+        document.getElementById("footerContainer").style.opacity="1";
     }
 }
                         //Meta developer Profile
@@ -198,4 +199,110 @@ function openForm()
     function formClose() {
         document.getElementById('formContainer').style.display="none";
     }
+}
+let devForm = document.getElementById("devForm");
+devForm.addEventListener('submit' , addProfile);
+function addProfile(e) {
+    e.preventDefault();
+    document.getElementById("formContainer").style.display="none";
+    document.getElementById("headerContainer").style.opacity="1";
+    let githubText = document.getElementById("githubText");
+    let githubUserName = githubText.value;
+    fetch("https://api.github.com/users/"+githubUserName).then((userResponse)=>{
+        console.log("Reponse received" , userResponse);
+        return userResponse.json();
+    }).then((userData)=>{
+        let button = document.createElement('button');
+        let img = document.createElement('img');
+        img.src = userData.avatar_url;
+        img.setAttribute('ID' , 'userprofileImage');   
+        button.append(img)
+        let textNode = document.createTextNode(userData.name);
+        button.appendChild(textNode);
+        button.setAttribute('ID' , 'userButton');
+        document.getElementById('devButtons').appendChild(button);
+        let userButton = document.getElementById("userButton");
+        userButton.addEventListener('click' , displayUserProfile)
+        function displayUserProfile() {
+            document.getElementById("devContainer").style.display="block";
+            document.getElementById("headerContainer").style.opacity="0.3";
+            document.getElementById("footerContainer").style.opacity="0.3";
+            // userImage
+            let userImage = document.getElementById("devImage");
+            userImage.src = userData.avatar_url;
+            // userName
+            let userName = document.getElementById("devName");
+            userName.innerHTML = userData.name;
+            // userBio
+            let userBio = document.getElementById("devBio");
+            userBio.innerHTML = userData.bio;
+            // github link
+            let userGithubValue = document.getElementById("githubText");
+            let gitUserName = userGithubValue.value;
+            let userGithubLink = document.getElementById("githubLink");
+            userGithubLink.href = "https://www.github.com/"+gitUserName;
+            // linkedin link
+            let userLinkedinValue = document.getElementById("linkedinText").value;
+            if(userLinkedinValue !=="") {
+                let userLinkedinLink = document.getElementById("linkedinLink");
+                userLinkedinLink.href = "https://www.linkedin.com/in/"+userLinkedinValue;
+            }
+            else if(userLinkedinValue ==="") {
+                let userLinkedinLink = document.getElementById("linkedinLink");
+                userLinkedinLink.href = "https://www.linkedin.com"
+            }
+            // codechef Link
+            let userCodechefValue = document.getElementById("codechefText").value;
+            if(userCodechefValue !=="") {
+                let userCodechefLink = document.getElementById("codechefLink");
+                userCodechefLink.href = "https://www.codechef.com/users/"+userCodechefValue;
+            }
+            else if(userCodechefValue ==="") {
+                let userCodechefLink = document.getElementById("codechefLink");
+                userCodechefLink.href = "https://www.codechef.com/"
+            }
+            // hackerrank link
+            let userHackerrankValue = document.getElementById("hackerrankText").value;
+            if(userHackerrankValue !=="") {
+                let userHackerrankLink = document.getElementById("hackerRankLink");
+                userHackerrankLink.href = "https://www.hackerrank.com/"+userHackerrankValue;
+            }
+            else if(userHackerrankValue ==="") {
+                let userHackerrankLink = document.getElementById("hackerRankLink");
+                userHackerrankLink.href = "https://www.hackerrank.com/";
+            }
+            //twitter link
+            let userTwitterValue = document.getElementById("twitterText").value;
+            if(userTwitterValue !=="") {
+                let userTwitterLink = document.getElementById("twitterLink");
+                userTwitterLink.href = "https://twitter.com/"+userTwitterValue;
+            }
+            else if(userTwitterValue === "") {
+                let userTwitterLink = document.getElementById("twitterLink");
+                userTwitterLink.href = "https://twitter.com/explore";
+            }
+            // medium link
+            let userMediumValue = document.getElementById("mediumText").value;
+            if(userMediumValue !=="") {
+                let userMediumLink = document.getElementById("mediumLink");
+                userMediumLink.href = "https://medium.com/@"+userMediumValue;
+            }
+            else if(userMediumValue === "") {
+                let userMediumLink = document.getElementById("mediumLink");
+                userMediumLink.href = "https://medium.com/";
+            }
+            // userLocation
+            let userdevLocation = document.getElementById("devLocation");
+            userdevLocation.innerHTML = userData.location;
+            // userCompany
+            let userdevcompany = document.getElementById("devcompany");
+            userdevcompany.innerHTML = userData.company;
+            // userLink
+            let userdevLink = document.getElementById("devLink");
+            userdevLink.innerHTML = userData.blog;
+        }
+        console.log(userData);
+    }).then((err)=>{
+        console.log(err , "Error");
+    })
 }
