@@ -26,6 +26,25 @@ function showDeveloperProfile() {
         // developer Link
         const devLink = document.getElementById("devLink");
         devLink.innerHTML = data.blog;
+        // github link
+        const githubLink = document.getElementById("githubLink");
+        githubLink.href = "https://www.github.com/jnsudhir";
+        // linkedin link
+        const linkedinLink = document.getElementById("linkedinLink");
+        linkedinLink.href = "https://www.linkedin.com/in/jnsudhir";
+        // codechef link
+        const codechefLink = document.getElementById("codechefLink");
+        codechefLink.href = "https://www.codechef.com/";
+        // Hackerrank link
+        const hackerRankLink = document.getElementById("hackerRankLink");
+        hackerRankLink.href = "https://www.hackerrank.com/";
+        // twitter link
+        const twitterLink = document.getElementById("twitterLink");
+        twitterLink.href = "https://twitter.com/explore";
+        // medium link
+        const mediumLink = document.getElementById("mediumLink");
+        mediumLink.href = "https://medium.com/@nagasudhir28";
+
         console.log(data);
     }).then((err)=>{
         console.log("Error");
@@ -102,6 +121,25 @@ function showMetaDeveloperProfile()
         // developer Link
         const devLink = document.getElementById("devLink");
         devLink.innerHTML = metaData.blog;
+        // github link
+        const githubLink = document.getElementById("githubLink");
+        githubLink.href = "https://github.com/facebook";
+        // linkedin link
+        const linkedinLink = document.getElementById("linkedinLink");
+        linkedinLink.href = "https://www.linkedin.com/company/meta/";
+        // codechef link
+        const codechefLink = document.getElementById("codechefLink");
+        codechefLink.href = "https://www.codechef.com/";
+        // Hackerrank link
+        const hackerRankLink = document.getElementById("hackerRankLink");
+        hackerRankLink.href = "https://www.hackerrank.com/";
+        // twitter link
+        const twitterLink = document.getElementById("twitterLink");
+        twitterLink.href = "https://twitter.com/Facebook";
+        // medium link
+        const mediumLink = document.getElementById("mediumLink");
+        mediumLink.href = "https://medium.com/";
+
         console.log(metaData);
     }).then((err)=>{
         console.log(err);
