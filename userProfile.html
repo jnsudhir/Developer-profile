@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Profile</title>
+    <link rel="stylesheet" href="userProfile.css">
+</head>
+<body>
+    <header id="devHeader">
+        <h2>The Developer Profile</h2> <h2 id="goBacktoHomePage">All Developers</h2>
+    </header>
+    <div id="devInfo">
+        <img id="developerImage">
+                <div id="devNameLocation">
+                    <h1 id="devName"></h1>
+                    <p id="devBio"></p>
+                    <a id="githubLink" target="_blank"><img src="github.png" id="githubImage"></a>
+                    <a id="linkedinLink" target="_blank"><img src="linkedin.png" id="linkedinImage"></a>
+                    <a id="codechefLink" target="_blank"><img src="codechef.png" id="codechefImage"></a>
+                    <a id="hackerRankLink" target="_blank"><img src="hackerRank.png" id="hackerRankImage"></a>
+                    <a id="twitterLink" target="_blank"><img src="twitter.png" id="twitterImage"></a>
+                    <a id="mediumLink" target="_blank"><img src="medium.png" id="mediumImage"></a>
+                    <div id="locationCompany">
+                        <img src="location_on-24px.svg" id="locationImage"></img><p id="devLocation"></p> 
+                        <img src="business-24px.svg" id="businessImage"></img><p id="devcompany"></p> 
+                        <img src="insert_link-24px (1).svg" id="linkImage"></img><p id="devLink"></p>
+                    </div>
+                </div>
+    </div>
+    <main>
+        <h2 id="repositoriesText">Github repositories</h2>
+                <hr>
+            <div id="repos"></div>
+            
+    </main>
+    <footer id="devFooter">
+        <button id="printButton" onclick="window.print()">Print</button>
+        <button id="goBackButon">Go back</button>
+
+    </footer>
+    <script src="userProfile.js"></script>
+</body>
+</html>

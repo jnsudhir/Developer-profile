@@ -1,4 +1,6 @@
-const sudhirButton = document.getElementById("sudhirButton");
+
+
+let sudhirButton = document.getElementById("sudhirButton");
 sudhirButton.addEventListener('click' , showDeveloperProfile);
 function showDeveloperProfile() {
     document.getElementById("devContainer").style.display="block";
@@ -9,40 +11,40 @@ function showDeveloperProfile() {
         return response.json();
     }).then(data=>{
         // developer Image
-        const devImage = document.getElementById("devImage");
+        let devImage = document.getElementById("devImage");
         devImage.src = data.avatar_url;
         // developer Name
-        const devName = document.getElementById("devName");
+        let devName = document.getElementById("devName");
         devName.innerHTML = data.name;
         // developer Bio
-        const devBio = document.getElementById("devBio");
+        let devBio = document.getElementById("devBio");
         devBio.innerHTML = data.bio;
         // developer Location
-        const devLocation = document.getElementById("devLocation");
+        let devLocation = document.getElementById("devLocation");
         devLocation.innerHTML = data.location;
         //developer company
-        const devCompany = document.getElementById("devcompany");
+        let devCompany = document.getElementById("devcompany");
         devCompany.innerHTML = data.company;
         // developer Link
-        const devLink = document.getElementById("devLink");
+        let devLink = document.getElementById("devLink");
         devLink.innerHTML = data.blog;
         // github link
-        const githubLink = document.getElementById("githubLink");
+        let githubLink = document.getElementById("githubLink");
         githubLink.href = "https://www.github.com/jnsudhir";
         // linkedin link
-        const linkedinLink = document.getElementById("linkedinLink");
+        let linkedinLink = document.getElementById("linkedinLink");
         linkedinLink.href = "https://www.linkedin.com/in/jnsudhir";
         // codechef link
-        const codechefLink = document.getElementById("codechefLink");
+        let codechefLink = document.getElementById("codechefLink");
         codechefLink.href = "https://www.codechef.com/";
         // Hackerrank link
-        const hackerRankLink = document.getElementById("hackerRankLink");
+        let hackerRankLink = document.getElementById("hackerRankLink");
         hackerRankLink.href = "https://www.hackerrank.com/";
         // twitter link
-        const twitterLink = document.getElementById("twitterLink");
+        let twitterLink = document.getElementById("twitterLink");
         twitterLink.href = "https://twitter.com/explore";
         // medium link
-        const mediumLink = document.getElementById("mediumLink");
+        let mediumLink = document.getElementById("mediumLink");
         mediumLink.href = "https://medium.com/@nagasudhir28";
 
         console.log(data);
@@ -200,12 +202,14 @@ function openForm()
         document.getElementById('formContainer').style.display="none";
     }
 }
+// user profile
+/*
 let devForm = document.getElementById("devForm");
 devForm.addEventListener('submit' , addProfile);
 function addProfile(e) {
     e.preventDefault();
-    document.getElementById("formContainer").style.display="none";
-    document.getElementById("headerContainer").style.opacity="1";
+    // document.getElementById("formContainer").style.display="none";
+    // document.getElementById("headerContainer").style.opacity="1";
     let githubText = document.getElementById("githubText");
     let githubUserName = githubText.value;
     fetch("https://api.github.com/users/"+githubUserName).then((userResponse)=>{
@@ -305,4 +309,91 @@ function addProfile(e) {
     }).then((err)=>{
         console.log(err , "Error");
     })
+    fetch(`https://api.github.com/users/${githubUserName}/repos`).then((Resultrepos)=>{
+        console.log("Repos received" ,Resultrepos );
+        return Resultrepos.json();
+    }).then((userrepoData)=>{
+        for(let j in userrepoData) {
+            // creating anchor tag
+            let a = document.createElement('a');
+            let link = document.createTextNode(userrepoData[j].name);
+            a.setAttribute('class' , 'devRepos')
+            a.appendChild(link);          
+            a.href = userrepoData[j].html_url;
+            a.title = userrepoData[j].name;
+            document.getElementById('repos').appendChild(a);
+            // creating repo last updated at
+            let p = document.createElement('p');
+            let text = "Last updated on : ";
+            p.innerHTML = text + " " +new Date(userrepoData[j].updated_at).toDateString();
+            p.setAttribute('class' , 'repoUpdatedat');
+            a.appendChild(p);
+            // creating repo description
+            let description = document.createElement('h3');
+            description.innerHTML = userrepoData[j].description;
+            description.setAttribute('class' , "repodescription");
+            a.appendChild(description);
+            // creating horizontal line for each repo
+            let hr = document.createElement('hr');
+            hr.style.width="90%"
+            hr.style.color ="#2F2E41";
+            a.appendChild(hr);
+            console.log("URL" , userrepoData[j].html_url);
+            console.log("updatedAt" , userrepoData[j].updated_at)
+        }
+        console.log(userrepoData);
+    }).then((err)=>{
+        console.log("Error in fetching repos", err)
+    })
+    document.getElementById('goBackButon').addEventListener('click' ,goBack);
+    function goBack()
+    {
+        document.getElementById('devContainer').style.display="none";
+        document.getElementById("headerContainer").style.opacity="1";
+        document.getElementById("footerContainer").style.opacity="1";
+    }
+}
+ */
+let devForm = document.getElementById('devForm');
+devForm.addEventListener('submit', addDevLink);
+function addDevLink(e) {
+    e.preventDefault();
+    document.getElementById("formContainer").style.display="none";
+    let githubText = document.getElementById('githubText');
+    let githubValue = githubText.value;
+    let linkedinText = document.getElementById('linkedinText').value;
+    let codechefText = document.getElementById('codechefText').value;
+    let hackerrankText = document.getElementById('hackerrankText').value;
+    let twitterText = document.getElementById('twitterText').value;
+    let mediumText = document.getElementById('mediumText').value;
+    fetch("https://api.github.com/users/"+githubValue).then((response) => {
+        console.log("Response" , response);
+        return response.json();
+    }).then((developerdata) => {
+        let devDataContainer = document.createElement('div');
+        devDataContainer.setAttribute("ID" , "devDataContainer");
+        let a = document.createElement('a');
+        let txtNode = document.createTextNode(developerdata.name);
+        a.appendChild(txtNode);
+        a.href = "userProfile.html";
+        a.title = developerdata.name;
+        a.target="_blank";
+        a.setAttribute("ID" , "devLinkText");
+        let devImg = document.createElement('img');
+        devImg.src = developerdata.avatar_url;
+        devImg.setAttribute('ID' , 'userprofileImage');
+        devDataContainer.appendChild(devImg);
+        devDataContainer.appendChild(a);    
+        document.getElementById('devButtons').appendChild(devDataContainer);
+        localStorage.setItem('devGithubName' , githubValue);
+        localStorage.setItem('devLinkedinName' , linkedinText);
+        localStorage.setItem('devCodechefName' , codechefText);
+        localStorage.setItem('devHackerrankName' , hackerrankText);
+        localStorage.setItem('devTwitterName' , twitterText);
+        localStorage.setItem('devMediumName' , mediumText);
+
+    }).catch((err) => {
+        console.log("Error" , err);
+    })
+
 }

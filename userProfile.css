@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap");
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
+body {
+    margin: 0;
+}
+#devHeader {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    background-color: #2f2e41;
+    width: 100%;
+  }
+#devInfo {
+    display: flex;
+    background-color: #d0cde1;
+    width: 100%;
+    height: 10cm;
+    justify-content: space-evenly;
+}
+#developerImage {
+    width: 7.5cm;
+    height: 7.5cm;
+    border-radius: 50%;
+    padding: 20px;
+    margin: 20px 15px 20px;
+    margin-left: 1cm;
+}
+#devName {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    justify-content: center;
+    font-size: 2cm;
+    color: #2f2e41;
+    font-family: "Nunito Sans", sans-serif;
+    height: 1.7cm;
+    width: 100%;
+}
+#devBio {
+    display: flex;
+    flex-wrap: wrap;
+    color: #2f2e41;
+    font-size: medium;
+    font-weight: bolder;
+    margin-top: -55px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    height: 0.7cm;
+}
+#githubImage,
+#linkedinImage,
+#codechefImage,
+#hackerRankImage,
+#twitterImage,
+#mediumImage {
+  width: 1cm;
+  height: 1cm;
+  border-radius: 50%;
+  padding: 10px;
+  margin-top: -70px;
+}
+#locationImage,
+#businessImage,
+#linkImage {
+  margin-bottom: 20px;
+}
+#devLocation,
+#devcompany,
+#devLink {
+  font-family: "Nunito Sans", sans-serif;
+  color: #2f2e41;
+  font-weight: bolder;
+  font-size: larger;
+  height: 0.9cm;
+  margin-top: 1px;
+}
+#locationCompany {
+    width: 100%;
+    height: 0.7cm;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#repositoriesText {
+    color: #2f2e41;
+    font-family: "Nunito Sans", sans-serif;
+    text-align: center;
+    margin: 15px;
+    font-size: 2cm;
+}
+#repos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#devFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+#printButton {
+    width: 2.5cm;
+    height: 1cm;
+    color: white;
+    background-color: #8c81d4;
+    border: none;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 10px;
+}
+#printButton:hover {
+    transform: scaleX(1.2);
+}
+#goBackButon {
+    width: 2.5cm;
+    height: 1cm;
+    color: white;
+    background-color: #8c81d4;
+    border: none;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 10px;
+}
+#devNameLocation {
+    display: flex;
+    margin-right: 4cm;
+    width: 50%;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+.devRepos {
+    color: #0768fa;
+    width: 100%;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.5cm;
+    text-decoration: none;
+}
+.repoUpdatedat {
+    color: #8c81d4;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: x-large;
+}
+.repodescription {
+    color: #2f2e41;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: x-large;
+}
+@media screen and (max-width: 500px) {
+    #devImage {
+        width: 4cm;
+        height: 4cm;
+    }
+
+
+}

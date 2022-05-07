@@ -77,21 +77,18 @@ header {
   font-family: "Nunito Sans", sans-serif;
 }
 #devButtonsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 1.6cm;
-  margin-bottom: 50px;
+  display: grid;
+  justify-content:space-around
 }
 #devButtons {
-  display: flex;
-  justify-content: center;
-border: 3px solid red;
-  width: 40%;
-  height:100%;
-  justify-content: space-between;
-  flex-grow: ;
-  
+    width: 110%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 180px;
+    justify-content: space-between;
+    row-gap: 10px;
 }
 #sudhirButton,
 #MetaButton {
@@ -100,7 +97,6 @@ border: 3px solid red;
   color: brown;
   border: none;
   cursor: pointer;
-border: 3px solid red;
   align-items: center;
   font-size: x-large;
   display: flex;
@@ -129,161 +125,8 @@ border: 3px solid red;
   box-shadow: 3px 10px 8px 10px #201f29;
 }
 
-#devHeader {
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  background-color: #2f2e41;
-  border-radius: 10px 10px 0 0;
-}
-#devInfo {
-  display: flex;
-  background-color: #d0cde1;
-  width: 100%;
-  height: 8cm;
-  justify-content: space-between;
-}
-#devImage {
-  width: 7cm;
-  height: 7cm;
-  border-radius: 50%;
-  padding: 20px;
-}
-#devNameLocation {
-  display: flex;
-margin-right: 4cm;
-  width: 50%;
-  flex-wrap: wrap;
-  text-align: center;
-  justify-content: center;
-}
-#devName {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 0;
 
-  justify-content: center;
-  font-size: 2cm;
-  color: #2f2e41;
-  font-family: "Nunito Sans", sans-serif;
-  height: 1.7cm;
-  width: 100%;
-}
-#devBio {
-  display: flex;
-  color: #2f2e41;
-  font-size: medium;
-  font-weight: bolder;
-  margin-top: -55px;
-  width: 100%;
 
-  text-align: center;
-  justify-content: center;
-  height: 0.7cm;
-}
-#githubImage,
-#linkedinImage,
-#codechefImage,
-#hackerRankImage,
-#twitterImage,
-#mediumImage {
-  width: 1cm;
-  height: 1cm;
-  border-radius: 50%;
-  padding: 10px;
-  margin-top: -70px;
-}
-#locationCompany {
-  width: 100%;
-  height: 0.7cm;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-#locationImage,
-#businessImage,
-#linkImage {
-  margin-bottom: 20px;
-}
-#devLocation,
-#devcompany,
-#devLink {
-  font-family: "Nunito Sans", sans-serif;
-  color: #2f2e41;
-  font-weight: bolder;
-  font-size: larger;
-  height: 0.9cm;
-  margin-top: 1px;
-}
-#repositoriesText {
-  color: #2f2e41;
-  font-family: "Nunito Sans", sans-serif;
-  text-align: center;
-  margin: 15px;
-  font-size: 2cm;
-}
-#repos {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  /* flex-direction: column; */
-}
-.devRepos {
-  color: #0768fa;
-  width: 100%;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1.5cm;
-  text-decoration: none;
-}
-.repoUpdatedat {
-  color: #8c81d4;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: x-large;
-}
-.repodescription {
-  color: #2f2e41;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: x-large;
-}
-#devFooter {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-#printButton {
-  width: 2.5cm;
-  height: 1cm;
-  color: white;
-  background-color: #8c81d4;
-  border: none;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: large;
-  font-weight: bold;
-  border-radius: 10px;
-}
-#printButton:hover {
-  transform: scaleX(1.2);
-}
-#goBackButon {
-  width: 2.5cm;
-  height: 1cm;
-  color: white;
-  background-color: #8c81d4;
-  border: none;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: large;
-  font-weight: bold;
-  border-radius: 10px;
-}
 #questionContainer{
     display: flex;
     flex-wrap: wrap;
@@ -427,17 +270,30 @@ transform: scaleX(1.2);
   color: brown;
   border: none;
   cursor: pointer;
-border: 3px solid red;
   align-items: center;
   font-size: x-large;
   display: flex;
   gap: 15px;
 }
 #userprofileImage{
+  flex-direction: column;
     display: flex;
     height: 1cm;
     width: 1cm;
     border-radius: 50%;
+}
+#devDataContainer {
+  display: flex;
+  gap: 30px;
+  text-decoration: none;
+  font-size: large;
+
+
+}
+#devLinkText{
+  text-decoration: none;
+  font-size:x-large;
+  color: brown;
 }
 @media screen and (max-width: 500px) {
   body {
@@ -510,10 +366,7 @@ border: 3px solid red;
     justify-content: center;
     height: 12cm;
   }
-  #devImage {
-    width: 4cm;
-    height: 4cm;
-  }
+
   #devNameLocation {
     width: 100%;
     justify-content: center;
